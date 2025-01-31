@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition Result | StarFinder</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .result-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Recognition Result</h2>
+    <div class="result-container">
+        <img id="result-image" src="" alt="Recognized Face">
+        <p id="result-text">Processing...</p>
+        
+    </div>
+    
+    <script>
+        // Simulating result retrieval from Live Recognition Page
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const resultImage = params.get("image");
+            const resultText = params.get("match") || "No match found";
+            
+            if (resultImage) {
+                document.getElementById("result-image").src = resultImage;
+            }
+            document.getElementById("result-text").textContent = `Your closest match: ${resultText}`;
+        });
+    </script>
+</body>
+</html>

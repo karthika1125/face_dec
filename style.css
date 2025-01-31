@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #07d511, #b513aa);
     color: white;
     padding: 20px 10%;
     border-bottom: 3px solid #fff;
@@ -59,7 +59,7 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background-color: rgb(235, 228, 238);
+    background: linear-gradient(135deg, #85d489, #d6a6d3);
     color: rgb(15, 15, 15);
     position: relative;
 }
@@ -107,7 +107,7 @@ nav ul li a:hover {
 /* Basic styles for the section */
 #how-it-works {
     padding: 50px 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #c0dd61, #9f9fbd);
     text-align: center;
 }
 
@@ -128,7 +128,7 @@ nav ul li a:hover {
 
 /* Individual step styles */
 .step {
-    background-color: #fff;
+    background: linear-gradient(135deg, #33463d, #6fd4ad);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -174,7 +174,7 @@ nav ul li a:hover {
 /* Styling the Featured Celebrities section */
 #featured-celebrities {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #85d489, #d6a6d3);
     text-align: center;
 }
 
@@ -195,7 +195,7 @@ nav ul li a:hover {
 
 /* Individual celebrity styling */
 .celebrity {
-    background-color: #fff;
+    background-color: #f5f6f6;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -233,10 +233,44 @@ nav ul li a:hover {
     }
 }
 
+button {
+    background-color: #ff7f50;  
+    color: white;               
+    font-size: 1.2rem;          
+    padding: 12px 24px;         
+    border: none;               
+    border-radius: 25px;       
+    cursor: pointer;           
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease-in-out;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+button:hover {
+    background-color: #e56b3f;  
+    transform: scale(1.05);      
+}
+
+button:active {
+    transform: scale(0.98); /* "Press" effect when clicked */
+}
+
+button:focus {
+    outline: none;              
+    box-shadow: 0 0 8px rgba(255, 127, 80, 0.8);  
+    background-color: #e56b3f; /* Change background on focus */
+}
+
+button:disabled {
+    background-color: #f2a19e; /* Disabled state */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
 /* Styling the Testimonials section */
 #testimonials {
     padding: 50px 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #33463d, #6fd4ad);
     text-align: center;
 }
 
@@ -250,7 +284,7 @@ nav ul li a:hover {
 
 /* Testimonial container */
 .testimonial {
-    background-color: #fff;
+    background: linear-gradient(135deg, #c0dd61, #9f9fbd);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -299,26 +333,73 @@ footer {
 }
 
 /* Copyright text */
-footer p {
-    margin-bottom: 10px;
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
-
-/* Link styling */
-footer a {
-    color: #ff7f50;  /* Coral color for the links */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    margin: 10px;
+}
+.footer-left p {
+    margin: 5px 0;
+}
+.footer-middle a {
+    color: #fff;
+    margin: 0 10px;
     text-decoration: none;
+}
+.footer-middle a:hover {
+    text-decoration: underline;
+}
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+.social-links li {
+    display: inline;
     margin: 0 10px;
 }
-
-/* Hover effect for links */
-footer a:hover {
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+.social-links a:hover {
     text-decoration: underline;
-    color: #e56b3f;  /* Darker shade of coral when hovered */
 }
 
-/* Make sure the footer is at the bottom on smaller screens */
-@media (max-width: 768px) {
-    footer {
-        font-size: 0.9rem;  /* Slightly smaller font on mobile */
-    }
+
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
+
+header {
+    background-color: #4CAF50;
+    padding: 15px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+

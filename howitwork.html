@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | StarFinder</title>
+    <link rel="stylesheet" href="workstyle.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="/how-it-works">How It Works</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="images/camer.png.png" alt="Upload Icon">
+                <p>Upload Your Photo</p>
+            </div>
+            <div class="step">
+                <img src="images/ai.png.png" alt="AI Icon">
+                <p>AI Does the Magic</p>
+            </div>
+            <div class="step">
+                <img src="images/result.png.png" alt="Result Icon">
+                <p>Get Your Results</p>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload Your Photo</h3>
+            <form id="photo-upload-form" enctype="multipart/form-data">
+                <input type="file" id="photo-upload" name="photo" accept="image/*" required>
+                <button type="submit">Upload Photo</button>
+            </form>
+            <p id="upload-status"></p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 StarFinder. All Rights Reserved.</p>
+        <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
+    </footer>
+
+    <script>
+        document.getElementById('photo-upload-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('photo-upload');
+            const file = fileInput.files[0];
+
+            if (file) {
+                document.getElementById('upload-status').textContent = 'Uploading...';
+
+                // Simulating the upload (you need to implement the server-side API)
+                setTimeout(function() {
+                    document.getElementById('upload-status').textContent = 'Upload successful! Your celebrity twin will be matched soon.';
+                }, 2000);
+            }
+        });
+    </script>
+
+</body>
+</html>
+
